@@ -3,18 +3,22 @@ import Car from './Cars';
 
 class Mycars extends Component{
 
-   noCopy = () => {
-       alert('Merci de ne pas copier le texte');
+   state  = {
+       voitures: [
+           {name: 'Ford', color: 'red', year: 2000},
+           {name: 'Mercedes', color: 'black', year: 2010},
+           {name: 'Peaugot', color: 'green', year: 2040}
+       ]
    }
 
     render(){
         return(
-            <div>
+            <div>   
                 <h1 id="titre">{this.props.title}</h1>
-                <p onCopy={this.noCopy}>Ceci est un est texte pour tester la fonctionnalité</p> 
-                <Car>Ford</Car>
-                <Car color="yellow">Mercedes</Car>
-                <Car color="green">Peugeot</Car>
+                <p>Ceci est un est texte pour tester la fonctionnalité</p> 
+                <Car color={this.state.voitures[0].color} year={this.state.voitures[0].year}>{this.state.voitures[0].name}</Car>
+                <Car color={this.state.voitures[1].color} year={this.state.voitures[1].year}>{this.state.voitures[1].name}</Car>
+                <Car color={this.state.voitures[2].color} year={this.state.voitures[2].year}>{this.state.voitures[2].name}</Car>    
             </div>
             
         )
