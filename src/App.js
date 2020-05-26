@@ -28,8 +28,8 @@ class App extends Component {
           <Mycars title ={this.state.titre}/>
           <input type="text" value={this.state.titre} onChange={this.changeViaInput} />
           <button onClick={this.changeTitle}>Changer titre</button>
-          <p>------------------------------</p>
-          <Test></Test>
+          {/* <p>------------------------------</p>
+          <Test></Test> */}
       </div>
     );
    }
