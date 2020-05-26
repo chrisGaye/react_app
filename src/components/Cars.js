@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const Cars = ({children,color}) => {
+const Cars = ({children,color, year}) => {
     
     const colorInfo = color ? (<p>Couleur :{color}</p>) : (<p>Couleur :Néant</p>);
 
